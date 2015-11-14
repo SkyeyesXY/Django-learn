@@ -23,7 +23,8 @@ urlpatterns = patterns('',
     #url(r'^$', 'my_blog.views.home', name='home'),
     #url(r'^blog/', include('blog.urls')),
 
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'article.views.home'),
+    url(r'^test/$', 'article.views.test'),
     url(r'^(?P<my_args>\d+)/$', 'article.views.detail', name = 'detail'),
 )
